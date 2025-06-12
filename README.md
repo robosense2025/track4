@@ -1,4 +1,4 @@
-# 🚁 RoboSense 2025 - Track 4: Cross-Modal Drone Navigation
+# 🚁 RoboSense Track 4: Cross-Modal Drone Navigation
 
 <div align="center">
 
