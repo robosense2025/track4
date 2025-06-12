@@ -4,7 +4,8 @@
 
 **Official Baseline Implementation for Cross-Modal Drone Navigation**
 
-*Based on GeoText-1652: Towards Natural Language-Guided Drones with Spatial Relation Matching(https://github.com/MultimodalGeo/GeoText-1652)*
+*Based on GeoText-1652: Towards Natural Language-Guided Drones with Spatial Relation Matching
+(https://github.com/MultimodalGeo/GeoText-1652)*
 
 [![RoboSense Challenge](https://img.shields.io/badge/RoboSense-2025-blue)](https://robosense2025.github.io/)
 [![Track 4](https://img.shields.io/badge/Track-Cross--Modal%20Drone%20Navigation-green)](https://robosense2025.github.io/track4)
