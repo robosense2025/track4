@@ -1,4 +1,4 @@
-# 🚁 RoboSense 2025 Track 4: Cross-Modal Drone Navigation
+# 🚁 RoboSense 2025 - Track 4: Cross-Modal Drone Navigation
 
 <div align="center">
 
@@ -127,6 +127,7 @@ python3 run.py --task "re_bbox" --dist "l4" --evaluate \
 
 **Evaluation Options**:
 - **Phase I (Recommended)** - 24GB GPU version (~190 cases): `datasets/track4-cross-modal-drone-navigation/test_24G_version.json`
+- **Phase II** - Private test set (~190 cases): Available during Phase II evaluation only
 - **Full test** (951 cases): `datasets/track4-cross-modal-drone-navigation/test_951_version.json`
 
 ### Training (For Model Development)
@@ -178,19 +179,22 @@ datasets/track4-cross-modal-drone-navigation/
 ## 🎖️ Challenge Participation
 
 ### Submission Requirements
-1. **Code**: Submit reproducible code with your final results
-2. **Model**: Include trained model weights
-3. **Results**: Provide evaluation metrics on the official test set
-4. **Report**: Technical report describing your approach
+1. **Phase I**: Submit results on public test set with reproducible code
+2. **Phase II**: Final evaluation on private test set (same size as Phase I)
+3. **Code**: Submit reproducible code with your final results
+4. **Model**: Include trained model weights
+5. **Report**: Technical report describing your approach
 
 ### Evaluation Metrics
 - **Recall@K**: R@1, R@5, R@10 for both text-to-image and image-to-text retrieval
 - **Robustness**: Performance under various corruptions and noise conditions
+- **Phase I**: Public leaderboard based on 24GB test set
+- **Phase II**: Final ranking based on private test set
 
 ### Timeline
 - **Registration**: [Google Form](https://forms.gle/robosense2025)
-- **Phase 1 Deadline**: TBA
-- **Phase 2 Deadline**: TBA  
+- **Phase I Deadline**: Public test set evaluation (~190 cases)
+- **Phase II Deadline**: Private test set evaluation (~190 cases)
 - **Awards Announcement**: IROS 2025
 
 ## 🔗 Resources
