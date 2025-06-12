@@ -1,4 +1,4 @@
-# 🚁 RoboSense 2025 Challenge - Track 4: Cross-Modal Drone Navigation
+# 🚁 RoboSense 2025 Track 4: Cross-Modal Drone Navigation
 
 <div align="center">
 
@@ -57,7 +57,9 @@ This track uses the **RoboSense Track 4 Cross-Modal Drone Navigation Dataset**, 
 | **Ground** | Train | 11,663 | 34,989 | 14,761 | 701 | 33 |
 | **Ground** | Test | 2,921 | 8,763 | 4,023 | 793 | 39 |
 
-### Baseline Performance (24GB GPU Version)
+### Baseline Performance (Phase I - 24GB GPU Version)
+> **Note**: For Phase I evaluation, we recommend using the 24GB GPU version (~190 test cases) for faster development and testing.
+
 ```
 | Text Query | Image Query |
 |R@1  R@5  R@10|R@1  R@5  R@10|
@@ -101,9 +103,10 @@ This track uses the **RoboSense Track 4 Cross-Modal Drone Navigation Dataset**, 
    git clone https://huggingface.co/truemanv5666/GeoText1652_model
    ```
 
-5. **Extract dataset images**:
+5. **Extract dataset** (if compressed):
    ```bash
-   cd datasets/track4-cross-modal-drone-navigation/images
+   cd datasets/track4-cross-modal-drone-navigation
+   # Extract any compressed files if present
    find . -type f -name "*.tar.gz" -print0 | xargs -0 -I {} bash -c 'tar -xzf "{}" -C "$(dirname "{}")" && rm "{}"'
    ```
 
@@ -123,8 +126,8 @@ python3 run.py --task "re_bbox" --dist "l4" --evaluate \
 ```
 
 **Evaluation Options**:
+- **Phase I (Recommended)** - 24GB GPU version (~190 cases): `datasets/track4-cross-modal-drone-navigation/test_24G_version.json`
 - **Full test** (951 cases): `datasets/track4-cross-modal-drone-navigation/test_951_version.json`
-- **24GB GPU version** (~190 cases): `datasets/track4-cross-modal-drone-navigation/test_24G_version.json`
 
 ### Training (For Model Development)
 
