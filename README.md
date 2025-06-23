@@ -2,41 +2,57 @@
 
 <div align="center">
 
-**Official Baseline Implementation for Cross-Modal Drone Navigation**
+**Official Baseline Implementation for Track 4**
 
-*Based on GeoText-1652: Towards Natural Language-Guided Drones with Spatial Relation Matching
-(https://github.com/MultimodalGeo/GeoText-1652)*
+*Based on GeoText-1652: Towards Natural Language-Guided Drones with Spatial Relation Matching*<br>(https://github.com/MultimodalGeo/GeoText-1652)
 
 [![RoboSense Challenge](https://img.shields.io/badge/RoboSense-2025-blue)](https://robosense2025.github.io/)
 [![Track 4](https://img.shields.io/badge/Track-Cross--Modal%20Drone%20Navigation-green)](https://robosense2025.github.io/track4)
 [![IROS 2025](https://img.shields.io/badge/IROS-2025-red)](https://iros2025.org/)
+[![CodaBench](https://img.shields.io/badge/CodaBench-Submit-purple)](https://www.codabench.org/competitions/9219/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](LICENSE)
 
 **🏆 Prize Pool: $2,000 USD for Track 4 Winners**
 
+<p align="center">
+  <img src="docs/figures/track4.jpg" align="center" width="60%">
+</p>
+
 </div>
 
-## 📢 Challenge Overview
+
+
+## Challenge Overview
 
 **Track 4: Cross-Modal Drone Navigation** focuses on developing robust models for natural language-guided cross-view image retrieval. This track challenges participants to create systems that can effectively retrieve corresponding images from large-scale cross-view databases based on natural language descriptions, even under common corruptions such as blurriness, occlusions, or sensory noise.
 
-### 🎯 Challenge Objectives
+### 🎯 Objectives
 
 - **Cross-View Retrieval**: Match images across drastically different viewpoints (aerial drone/satellite vs. ground-level)
 - **Natural Language Guidance**: Process text descriptions to guide image retrieval
 - **Robustness**: Maintain performance under real-world corruptions and noise
 - **Multi-Platform Support**: Handle imagery from drone, satellite, and ground cameras
 
-## 🏆 Competition Details
 
-- **Venue**: IROS 2025, Hangzhou, China (Oct 19-25, 2025)
-- **Registration**: [Google Form](https://forms.gle/robosense2025)
+
+## Competition Details
+
+- **Venue**: IROS 2025, Hangzhou (Oct 19-25, 2025)
+- **Registration**: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdwfvk-NHdQh9-REiBLCjHMcyLT-sPCOCzJU-ux5jbcZLTkBg/viewform) (Open until Aug 15)
 - **Contact**: robosense2025@gmail.com
-- **Awards**: 
-  - 🥇 1st Place: $1,000 + Certificate
-  - 🥈 2nd Place: $600 + Certificate  
-  - 🥉 3rd Place: $400 + Certificate
-  - 🌟 Innovation Award: Certificate
+
+
+### 🏆 **Awards**
+
+| Prize | Award |
+|:-|:-|
+| 🥇 1st Place | $1000 + Certificate |
+| 🥈 2nd Place | $600 + Certificate |
+| 🥉 3rd Place | $400 + Certificate |
+| 🌟 Innovation Award | Cash Award + Certificate |
+| Participation | Certificate |
+
+
 
 ## 📊 Official Dataset
 
@@ -50,7 +66,7 @@ This track uses the **RoboSense Track 4 Cross-Modal Drone Navigation Dataset**, 
 ### Dataset Statistics
 
 | Platform | Split | Images | Descriptions | Bbox-Texts | Classes | Universities |
-|----------|-------|--------|--------------|------------|---------|--------------|
+|:-|:-:|:-:|:-:|:-:|:-:|:-:|
 | **Drone** | Train | 37,854 | 113,562 | 113,367 | 701 | 33 |
 | **Drone** | Test | 51,355 | 154,065 | 140,179 | 951 | 39 |
 | **Satellite** | Train | 701 | 2,103 | 1,709 | 701 | 33 |
@@ -58,19 +74,21 @@ This track uses the **RoboSense Track 4 Cross-Modal Drone Navigation Dataset**, 
 | **Ground** | Train | 11,663 | 34,989 | 14,761 | 701 | 33 |
 | **Ground** | Test | 2,921 | 8,763 | 4,023 | 793 | 39 |
 
-### Baseline Performance (Phase I - 24GB GPU Version)
-> **Note**: For Phase I evaluation, we recommend using the 24GB GPU version (~190 test cases) for faster development and testing.
+### Baseline Performance (Phase 1 - 24GB GPU Version)
+> **Note**: For Phase 1 evaluation, we recommend using the 24GB GPU version (~190 test cases) for faster development and testing.
 
-```
+
 | Text Query | Image Query |
+|:-:|:-:|
 |R@1  R@5  R@10|R@1  R@5  R@10|
 |29.9|46.3|54.1|50.1|81.2|90.3|
-```
+
+
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- CUDA-capable GPU (24GB+ recommended)
+- CUDA-capable GPU (24 GB+ recommended)
 - Python 3.8+
 - Git LFS
 
@@ -177,6 +195,7 @@ datasets/track4-cross-modal-drone-navigation/
 └── test_951_version.json
 ```
 
+
 ## 🎖️ Challenge Participation
 
 ### Submission Requirements
@@ -186,58 +205,77 @@ datasets/track4-cross-modal-drone-navigation/
 4. **Model**: Include trained model weights
 5. **Report**: Technical report describing your approach
 
+
 ### Evaluation Metrics
 - **Recall@K**: R@1, R@5, R@10 for both text-to-image and image-to-text retrieval
 - **Robustness**: Performance under various corruptions and noise conditions
-- **Phase I**: Public leaderboard based on 24GB test set
-- **Phase II**: Final ranking based on private test set
+- **Phase 1**: Public leaderboard based on 24GB test set
+- **Phase 2**: Final ranking based on private test set
+
 
 ### Timeline
-- **Registration**: [Google Form](https://forms.gle/robosense2025)
-- **Phase I Deadline**: Public test set evaluation (~190 cases)
-- **Phase II Deadline**: Private test set evaluation (~190 cases)
+- **Registration**: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdwfvk-NHdQh9-REiBLCjHMcyLT-sPCOCzJU-ux5jbcZLTkBg/viewform)
+- **Phase 1 Deadline**: Public test set evaluation (~190 cases)
+- **Phase 2 Deadline**: Private test set evaluation (~190 cases)
 - **Awards Announcement**: IROS 2025
+
 
 ## 🔗 Resources
 
 - **Challenge Website**: [robosense2025.github.io](https://robosense2025.github.io/)
 - **Track 4 Details**: [Track 4 Page](https://robosense2025.github.io/track4)
 - **Official Dataset**: [HuggingFace - RoboSense Track 4](https://huggingface.co/datasets/robosense/datasets/tree/main/track4-cross-modal-drone-navigation)
-- **Original GeoText Paper**: [arXiv:2311.12751](https://arxiv.org/pdf/2311.12751)
+- **Original GeoText Paper**: [arXiv:2311.12751](https://arxiv.org/abs/2311.12751)
 - **Baseline Model**: [HuggingFace](https://huggingface.co/truemanv5666/GeoText1652_model)
+
 
 ## 📧 Contact & Support
 
 - **Email**: robosense2025@gmail.com
-- **Challenge Website**: https://robosense2025.github.io/
+- **Official Website**: https://robosense2025.github.io
 - **Issues**: Please use GitHub Issues for technical questions
+
+
 
 ## 📄 Citation
 
-If you use this baseline or the GeoText-1652 dataset, please cite:
+If you use the code and dataset in your research, please cite:
 
 ```bibtex
 @inproceedings{chu2024towards, 
-  title={Towards Natural Language-Guided Drones: GeoText-1652 Benchmark with Spatial Relation Matching}, 
-  author={Chu, Meng and Zheng, Zhedong and Ji, Wei and Wang, Tingyu and Chua, Tat-Seng}, 
-  booktitle={ECCV}, 
-  year={2024} 
+  title = {Towards Natural Language-Guided Drones: GeoText-1652 Benchmark with Spatial Relation Matching}, 
+  author = {Chu, Meng and Zheng, Zhedong and Ji, Wei and Wang, Tingyu and Chua, Tat-Seng}, 
+  booktitle = {European Conference on Computer Vision},
+  year = {2024},
+  organization = {Springer}
 }
 ```
 
-## 🙏 Acknowledgements
 
-- **GeoText-1652 Team** for the original benchmark and baseline implementation
-- **X-VLM** project for the foundational vision-language model
-- **RoboSense Challenge Organizers** for hosting this competition
+## Acknowledgements
+
+### RoboSense 2025 Challenge Organizers
+
+<p align="center">
+  <img src="docs/figures/organizers.jpg" align="center" width="99%">
+</p>
+
+
+### RoboSense 2025 Program Committee
+
+<p align="center">
+  <img src="docs/figures/organizers2.jpg" align="center" width="99%">
+</p>
+
+
 
 ---
 
 <div align="center">
 
-**🚁 Ready to navigate the future of drone intelligence? Register now and compete for $2,000!**
+**🤖 Ready to sense the world robustly? Register now and compete for $2,000!**
 
-[**📝 Register Here**](https://forms.gle/robosense2025) | [**🌐 Challenge Website**](https://robosense2025.github.io/) | [**📧 Contact Us**](mailto:robosense2025@gmail.com)
+[**📝 Register Here**](https://docs.google.com/forms/d/e/1FAIpQLSdwfvk-NHdQh9-REiBLCjHMcyLT-sPCOCzJU-ux5jbcZLTkBg/viewform) | [**🌐 Challenge Website**](https://robosense2025.github.io/) | [**📧 Contact Us**](mailto:robosense2025@gmail.com)
 
 Made with ❤️ by the RoboSense 2025 Team
 
