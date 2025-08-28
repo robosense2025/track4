@@ -431,8 +431,9 @@ def save_results(query_ids, rankings, output_file):
             # 检查图像ID格式，确保都是完整的
             valid_images = []
             for img_id in top10_images:
-                if img_id and len(img_id) > 6:  # "image_" 至少要有6个字符
+                if img_id and (len(img_id) == 5 or (img_id.startswith("image_") and len(img_id) > 6)):
                     valid_images.append(img_id)
+
                 else:
                     print(f"Warning: Invalid image ID '{img_id}' for query {query_id}")
                     if valid_images:
